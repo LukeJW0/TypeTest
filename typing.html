@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="typing.css">
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body onload="loaded()">
+    <div id="main">
+        <div id="top">
+            <button id="cursor" onclick="changecursor()">Cursor Style</button>
+            <h1 id="title">TypeTest</h1>
+            <button id="words" onclick="changewords()">Words: 10</button>
+        </div>
+        <div id="text"></div>
+        <div id="time">00:00.00</div>
+    </div>
+    <div id="results">
+        <h1>Results</h1>
+        <h2 id="timeresult">Time: 00:00.00</h2>
+        <h2 id="wpm">WPM: 0</h2>
+        <h2 id="rawwpm">Raw WPM: 0</h2>
+        <h2 id="accuracy">Accuracy: 0%</h2>
+        <button id="typeagain" onclick="again()">Type Again</button>
+        <button id="statsbutton" onclick="openStats()">Open Stats</button>
+    </div>
+    <div id="stats">
+        <h1>Stats</h1>
+        <!-- <h1 id="np">No Punctuation</h1> -->
+        <h2 class="statbests" id="npbesttime">Best Time: 00:00.00</h2>
+        <h2 class="statbests" id="npbestwpm">Best WPM: 0</h2>
+        <h2 class="statbests" id="npbestacc">Best Accuracy: 0%</h2>
+        <h2 class="statbests" id="npavgwpm">Avg. WPM: 0</h2>
+        <h2 class="statbests" id="npavgacc">Avg. Accuracy: 0%</h2>
+        <!-- <div id="nopunc">
+            <h1 id="np">No Punctuation</h1>
+            <h2 class="statbests">Best Time: 00:00:00</h2>
+            <h2 class="statbests">Best WPM: 0</h2>
+            <h2 class="statbests">Best Accuracy: 0%</h2>
+            <h2 class="statbests">Avg. WPM: 0</h2>
+            <h2 class="statbests">Avg. Accuracy: 0%</h2>
+        </div> -->
+        <!-- <div id="punc">
+            <h1 id="p">Punctuation</h1>
+            <h2 class="statbests">Best Time: 00:00:00</h2>
+            <h2 class="statbests">Best WPM: 0</h2>
+            <h2 class="statbests">Best Accuracy: 0%</h2>
+            <h2 class="statbests">Avg. WPM: 0</h2>
+            <h2 class="statbests">Avg. Accuracy: 0%</h2>
+        </div> -->
+        <button id="statwords" onclick="changeWordsStats()">Words: 1</button>
+        <button id="openresults" onclick="openResults()">Back</button>
+        <button id="clearstats" onclick="clearStats()">Clear Stats</button>
+    </div>
+</body>
+
+<script src="typing.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
